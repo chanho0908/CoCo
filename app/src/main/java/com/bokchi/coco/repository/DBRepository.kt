@@ -3,6 +3,7 @@ package com.bokchi.coco.repository
 import com.bokchi.coco.App
 import com.bokchi.coco.db.CoinPriceDatabase
 import com.bokchi.coco.db.entity.InterestCoinEntity
+import com.bokchi.coco.db.entity.SelectedCoinPriceEntity
 
 class DBRepository {
 
@@ -22,5 +23,12 @@ class DBRepository {
 
     // 사용자가 관심있어한 코인만 가져오기
     fun getAllInterestSelectedCoinData() = db.interestCoinDAO().getSelectedData()
+
+    // CoinPrice
+    fun getAllCoinPriceData() = db.SelectedCoinPriceDA0().getAllData()
+
+    fun insertCoinPriceData(selectedCoinPriceEntity: SelectedCoinPriceEntity) = db.SelectedCoinPriceDA0().insert(selectedCoinPriceEntity)
+
+    fun getOneSelectedCoinData(coinName: String) = db.SelectedCoinPriceDA0().getOneCoinData(coinName)
 
 }

@@ -74,6 +74,7 @@ class SelectViewModel : ViewModel() {
 
             // 2. 내가 선택한 코인인지 아닌지 구분해서
             // 포함하면 TRUE / 포함하지 않으면 FALSE
+
             val selected = selectedCoinList.contains(coin.coinName)
 
             val interestCoinEntity = InterestCoinEntity(
@@ -100,6 +101,7 @@ class SelectViewModel : ViewModel() {
 
         }
 
+        // 메인 쓰레드와 다른 실행 공간을 만들고 거기서 중괄호 블록 안의 코드들을 실행
         withContext(Dispatchers.Main){
             _saved.value = "done"
         }
