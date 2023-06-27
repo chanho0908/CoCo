@@ -1,6 +1,6 @@
 # CoCo
 
-> Retofit 동작 방식
+> Retrofit 동작 방식
 
 <br>
 
