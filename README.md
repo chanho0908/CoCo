@@ -5,7 +5,7 @@
 <br>
 
 ```
-// 네트워크와 통신할 서비스 인터페이스
+// 네트워크와 통신할 레트로핏 서비스 인터페이스
 interface Api {
 
     // public/ticker/ALL_KRW
